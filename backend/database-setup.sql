@@ -1,9 +1,17 @@
 -- APP_USER
 CREATE TABLE app_user (
-  APP_USER INT NOT NULL,
+  APP_USER_ID INT NOT NULL,
   FIRST_NAME varchar(30) NOT NULL,
   LAST_NAME varchar(30),
   USERNAME varchar(255),
   EMAIL varchar(320),
-  PASSWORD varchar(255)
+  PASSWORD varchar(255),
+  PRIMARY KEY (APP_USER_ID)
 );
+
+-- LEAGUE
+CREATE TABLE league (
+	LEAGUE_ID INT NOT NULL,
+  TV_SHOW varchar(255),
+  PRIMARY KEY (LEAGUE_ID)
+)
