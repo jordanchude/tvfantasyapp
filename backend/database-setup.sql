@@ -15,3 +15,9 @@ CREATE TABLE league (
   TV_SHOW varchar(255),
   PRIMARY KEY (LEAGUE_ID)
 )
+
+-- LEAGUE USER
+CREATE TABLE league_user (
+league_id INT REFERENCES league (league_id),
+app_user_id INT REFERENCES app_user (app_user_id)
+);
