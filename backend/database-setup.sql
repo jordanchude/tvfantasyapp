@@ -29,3 +29,12 @@ CREATE TABLE quiz (
   PRIMARY KEY (quiz_id),
   FOREIGN KEY (league_id) REFERENCES league (league_id)
 );
+
+-- LEAGUE QUIZ
+CREATE TABLE league_quiz (
+	league_quiz_id SERIAL NOT NULL,
+  league_id INT NOT NULL,
+  episode INT NOT NULL,
+  PRIMARY KEY (league_quiz_id),
+  FOREIGN KEY (league_id) REFERENCES league (league_id)
+);
