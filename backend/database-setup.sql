@@ -21,3 +21,11 @@ CREATE TABLE league_user (
 league_id INT REFERENCES league (league_id),
 app_user_id INT REFERENCES app_user (app_user_id)
 );
+
+-- QUIZ
+CREATE TABLE quiz (
+	quiz_id SERIAL,
+  league_id INT,
+  PRIMARY KEY (quiz_id),
+  FOREIGN KEY (league_id) REFERENCES league (league_id)
+);
