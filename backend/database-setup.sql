@@ -38,3 +38,13 @@ CREATE TABLE league_quiz (
   PRIMARY KEY (league_quiz_id),
   FOREIGN KEY (league_id) REFERENCES league (league_id)
 );
+
+-- QUIZ QUESTIONS
+CREATE TABLE quiz_questions (
+	quiz_questions_id SERIAL NOT NULL,
+  league_quiz_id INT NOT NULL,
+  points INT NOT NULL,
+  prompt TEXT NOT NULL,
+  PRIMARY KEY (quiz_questions_id),
+  FOREIGN KEY (league_quiz_id) REFERENCES league_quiz (league_quiz_id)
+);
