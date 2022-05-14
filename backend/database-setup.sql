@@ -48,3 +48,13 @@ CREATE TABLE quiz_questions (
   PRIMARY KEY (quiz_questions_id),
   FOREIGN KEY (league_quiz_id) REFERENCES league_quiz (league_quiz_id)
 );
+
+-- QUIZ ANSWERS
+CREATE TABLE quiz_answers (
+	quiz_answers_id SERIAL NOT NULL,
+  quiz_questions_id INT NOT NULL,
+  answer TEXT NOT NULL,
+  correct BOOLEAN,
+  PRIMARY KEY (quiz_answers_id),
+  FOREIGN KEY (quiz_questions_id) REFERENCES quiz_questions (quiz_questions_id)
+);
